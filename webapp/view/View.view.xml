@@ -1,0 +1,58 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:t="sap.ui.table" controllerName="north.controller.View">
+    <Page title="Customer Data for Northwind Service">
+        <content>
+            <Table items="{/Customers}">
+                <columns>
+                    <Column>
+                        <Label text="CustomerID" />
+                    </Column>
+                    <Column>
+                        <Label text="CompanyName" />
+                    </Column>
+                    <Column>
+                        <Label text="ContactName" />
+                    </Column>
+                    <Column>
+                        <Label text="ContactTitle" />
+                    </Column>
+                    <Column>
+                        <Label text="Address" />
+                    </Column>
+                    <Column>
+                        <Label text="City" />
+                    </Column>
+                    <Column>
+                        <Label text="Region" />
+                    </Column>
+                    <Column>
+                        <Label text="PostalCode" />
+                    </Column>
+                    <Column>
+                        <Label text="Country" />
+                    </Column>
+                    <Column>
+                        <Label text="Phone" />
+                    </Column>
+                    <Column>
+                        <Label text="Fax" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <Text text="{CustomerID}" />
+                        <Text text="{CompanyName}" />
+                        <Text text="{ContactName}" />
+                        <Text text="{ContactTitle}" />
+                        <Text text="{Address}" />
+                        <Text text="{City}" />
+                        <Text text="{Region}" />
+                        <Text text="{PostalCode}" />
+                        <Text text="{Country}" />
+                        <Text text="{Phone}" />
+                        <Text text="{Fax}" />
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

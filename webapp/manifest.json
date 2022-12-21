@@ -1,0 +1,57 @@
+{
+  "sap.app": {
+    "id": "north",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "type": "application",
+    "dataSources": {
+      "anubhavService": {
+        "uri": "/V2/Northwind/Northwind.svc",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "fullWidth": true,
+    "supportedThemes": [
+      "sap_bluecrystal",
+      "sap_fiori_3",
+      "sap_fiori_3_dark"
+    ],
+    "technology": "UI5"
+  },
+  "sap.ui5": {
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "dependencies": {
+      "minUI5Version": "1.90",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.layout": {},
+        "sap.ui.comp": {}
+      }
+    },
+    "rootView":{
+      "viewName": "north.view.View",
+      "id": "idRootView",
+      "type": "XML"
+  },
+    "models": {
+      "": {
+        "dataSource": "anubhavService",
+        "preload": true
+      }
+    }
+  }
+}
