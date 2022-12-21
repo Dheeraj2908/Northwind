@@ -1,0 +1,12 @@
+specVersion: '2.6'
+metadata:
+  name: task
+type: application
+server:
+   customMiddleware:
+   - name: fiori-tools-proxy
+     afterMiddleware: compression
+     configuration:
+        backend:
+        - path: /V2
+          url: https://services.odata.org/
