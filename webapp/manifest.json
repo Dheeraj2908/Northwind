@@ -49,9 +49,9 @@
   },
     "models": {
       "": {
-        "dataSource": "anubhavService",
-        "preload": true
+            "dataSource": "anubhavService",
+            "preload": true
+          }
+        }
       }
-    }
-  }
 }

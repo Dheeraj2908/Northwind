@@ -1,7 +1,80 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:t="sap.ui.table" controllerName="north.controller.View">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+xmlns="sap.m"
+xmlns:f="sap.f"
+xmlns:fb="sap.ui.comp.filterbar"
+xmlns:svm="sap.ui.comp.smartvariants" xmlns:t="sap.ui.table" controllerName="north.controller.View">
     <Page title="Customer Data for Northwind Service">
+        <f:DynamicPageHeader>
+					<f:content>
+						<fb:FilterBar id="filterbar" persistencyKey="myPersKey" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+							<fb:filterItems>
+								<fb:FilterItem name="CompanyName" label="CompanyName">
+									<fb:control>
+										<!-- <MultiComboBox
+											name="Name"
+											selectionChange=".onSelectionChange"
+											items="{
+												path: '/ProductNames',
+												templateShareable: true
+											}"
+										>
+											<core:Item key="{key}" text="{name}"/>
+										</MultiComboBox> -->
+                                        <Input id="get" />
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem name="ContactName" label="ContactName">
+									<fb:control>
+										<!-- <MultiComboBox
+											name="Category"
+											selectionChange=".onSelectionChange"
+											items="{
+												path: '/ProductCategories',
+												templateShareable: true
+											}"
+										>
+											<core:Item key="{key}" text="{name}"/>
+										</MultiComboBox> -->
+                                        <Input id="give" />
+									</fb:control>
+								</fb:FilterItem>
+								<fb:FilterItem name="City" label="City">
+									<fb:control>
+										<!-- <MultiComboBox
+											name="SupplierName"
+											selectionChange=".onSelectionChange"
+											items="{
+												path: '/ProductSuppliers',
+												templateShareable: true
+											}"
+										>
+											<core:Item key="{key}" text="{name}"/>
+										</MultiComboBox> -->
+                                        <Input id="fetch" />
+									</fb:control>
+								</fb:FilterItem>
+                                <fb:FilterItem name="Country" label="Country">
+									<fb:control>
+										<!-- <MultiComboBox
+											name="SupplierName"
+											selectionChange=".onSelectionChange"
+											items="{
+												path: '/ProductSuppliers',
+												templateShareable: true
+											}"
+										>
+											<core:Item key="{key}" text="{name}"/>
+										</MultiComboBox> -->
+                                        <Input id="call" />
+									</fb:control>
+								</fb:FilterItem>
+							</fb:filterItems>
+						</fb:FilterBar>
+					</f:content>
+				</f:DynamicPageHeader>
+        
         <content>
-            <Table items="{/Customers}">
+            <Table id="tab" items="{/Customers}">
                 <columns>
                     <Column>
                         <Label text="CustomerID" />
