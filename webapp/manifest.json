@@ -44,14 +44,19 @@
     },
     "rootView":{
       "viewName": "north.view.View",
-      "id": "idRootView",
-      "type": "XML"
-  },
+      "id": "fcl",
+      "type": "XML",
+      "async": true
+    },
     "models": {
       "": {
             "dataSource": "anubhavService",
             "preload": true
+          },
+      "local": {
+            "dataSource": "anubhavService",
+            "preload": true
           }
-        }
-      }
+    }
+  }
 }
